@@ -50,13 +50,33 @@ while True:
         pointer = int(lines[instr_pointer])
         instr_pointer = pointer - 1
     elif instr == instruction_set['jeq']:
-        pass
+        instr_pointer += 1
+        a = stack.pop()
+        b = stack.pop()
+        if a == b:
+            pointer = int(lines[instr_pointer])
+            instr_pointer = pointer - 1
     elif instr == instruction_set['jne']:
-        pass
+        instr_pointer += 1
+        a = stack.pop()
+        b = stack.pop()
+        if a != b:
+            pointer = int(lines[instr_pointer])
+            instr_pointer = pointer - 1
     elif instr == instruction_set['jlt']:
-        pass
+        instr_pointer += 1
+        a = stack.pop()
+        b = stack.pop()
+        if a < b:
+            pointer = int(lines[instr_pointer])
+            instr_pointer = pointer - 1
     elif instr == instruction_set['jgt']:
-        pass
+        instr_pointer += 1
+        a = stack.pop()
+        b = stack.pop()
+        if a > b:
+            pointer = int(lines[instr_pointer])
+            instr_pointer = pointer - 1
     elif instr == instruction_set['int']:
         instr_pointer += 1
         interrupt_nr = int(lines[instr_pointer])
