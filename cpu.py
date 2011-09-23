@@ -14,27 +14,44 @@ while True:
     instr = int(lines[instr_pointer])
     
     if instr == instruction_set['add']:
-        pass    
+        a = stack.pop()
+        b = stack.pop()
+        stack.append(a + b)
     elif instr == instruction_set['sub']:
-        pass
+        a = stack.pop()
+        b = stack.pop()
+        stack.append(a - b)
     elif instr == instruction_set['div']:
-        pass
+        a = stack.pop()
+        b = stack.pop()
+        stack.append(a / b)
     elif instr == instruction_set['mul']:
-        pass
+        a = stack.pop()
+        b = stack.pop()
+        stack.append(a * b)
     elif instr == instruction_set['mod']:
-        pass
+        a = stack.pop()
+        b = stack.pop()
+        stack.append(a % b)
     elif instr == instruction_set['inc']:
         value = stack.pop
         value += 1
         stack.append(value)
     elif instr == instruction_set['or']:
-        pass
+        a = stack.pop()
+        b = stack.pop()
+        stack.append(a | b)
     elif instr == instruction_set['and']:
-        pass
+        a = stack.pop()
+        b = stack.pop()
+        stack.append(a & b)
     elif instr == instruction_set['not']:
-        pass
+        value = stack.pop()
+        stack.append(~a)
     elif instr == instruction_set['xor']:
-        pass
+        a = stack.pop()
+        b = stack.pop()
+        stack.append(a ^ b)
     elif instr == instruction_set['pushaddr']:
         instr_pointer += 1
         address = int(lines[instr_pointer])
@@ -44,7 +61,7 @@ while True:
         instr = int(lines[instr_pointer])
         stack.append(instr)
     elif instr == instruction_set['pop']:
-        pass
+        stack.pop()
     elif instr == instruction_set['popaddr']:
         instr_pointer += 1
         address = int(lines[instr_pointer])
