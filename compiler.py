@@ -49,9 +49,12 @@ instr_pointer = 0
 for instr in program:
 	if isinstance(instr, basestring):
 		labels[instr] = instr_pointer
+	elif isinstance(instr, int):
+		cleaned_program.append(instr)
+		instr_pointer += 1
 	else:
 		cleaned_program.append(instr)
-		instr_pointer += 1	
+		instr_pointer += 2
 
 
 
