@@ -3,8 +3,9 @@
 .loopstart
   pushaddr $counter
   pushconst 15
-  jlt 5
+  jlt .next
   jmp .endloop
+.next
   pushaddr $counter
   int 1
   pushaddr $counter

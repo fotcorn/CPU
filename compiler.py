@@ -9,7 +9,7 @@ REGEX_LABEL =           '\s*(\.[a-z]+).*'
 
 
 
-fin = file('input/program.asm', 'r')
+fin = file('input/program_for.asm', 'r')
 lines = fin.readlines()
 fin.close()
 

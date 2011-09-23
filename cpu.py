@@ -9,6 +9,8 @@ memory = {}
 instr_pointer = 0
 
 while True:
+    if instr_pointer >= len(lines):
+        break
     instr = int(lines[instr_pointer])
     
     if instr == instruction_set['add']:
@@ -22,7 +24,9 @@ while True:
     elif instr == instruction_set['mod']:
         pass
     elif instr == instruction_set['inc']:
-        pass
+        value = stack.pop
+        value += 1
+        stack.append(value)
     elif instr == instruction_set['or']:
         pass
     elif instr == instruction_set['and']:
