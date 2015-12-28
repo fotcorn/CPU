@@ -1,32 +1,32 @@
 
-instruction_set = {}
+instruction_set = {
+    # Arithmetic
+    'add': 0x01,
+    'sub': 0x02,
+    'div': 0x03,
+    'mul': 0x04,
+    'mod': 0x05,
+    'inc': 0x06,
 
-#Arithmetic
-instruction_set['add'] = 0x01
-instruction_set['sub'] = 0x02
-instruction_set['div'] = 0x03
-instruction_set['mul'] = 0x04
-instruction_set['mod'] = 0x05
-instruction_set['inc'] = 0x06
+    # Logic
+    'or': 0x11,
+    'and': 0x12,
+    'not': 0x13,
+    'xor': 0x14,
 
-# Logic
-instruction_set['or'] = 0x11
-instruction_set['and'] = 0x12
-instruction_set['not'] = 0x13
-instruction_set['xor'] = 0x14
+    # Stack
+    'pushaddr': 0x21,
+    'pushconst': 0x22,
+    'pop': 0x23,
+    'popaddr': 0x24,
 
-# Stack
-instruction_set['pushaddr'] = 0x21
-instruction_set['pushconst'] = 0x22
-instruction_set['pop'] = 0x23
-instruction_set['popaddr'] = 0x24
+    # Jumps
+    'jmp': 0x31,
+    'jeq': 0x32,
+    'jne': 0x33,
+    'jlt': 0x34,
+    'jgt': 0x35,
 
-# Jumps
-instruction_set['jmp'] = 0x31
-instruction_set['jeq'] = 0x32
-instruction_set['jne'] = 0x33
-instruction_set['jlt'] = 0x34
-instruction_set['jgt'] = 0x35
-
-# Misc
-instruction_set['int'] = 0x41
+    # Misc
+    'int': 0x41,
+}

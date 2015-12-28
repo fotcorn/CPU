@@ -47,7 +47,7 @@ while True:
         stack.append(a & b)
     elif instr == instruction_set['not']:
         value = stack.pop()
-        stack.append(~a)
+        stack.append(~value)
     elif instr == instruction_set['xor']:
         a = stack.pop()
         b = stack.pop()
