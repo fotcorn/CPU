@@ -1,3 +1,4 @@
+# endless loop that prints 5
 pushconst 5
 popaddr $counter
 .label

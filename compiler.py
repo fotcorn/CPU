@@ -24,6 +24,8 @@ def compile_file(path):
 
     program = []
     for line in lines:
+        if line.startswith('#'):  # comments
+            continue
         match = re.match(REGEX_INSTR_STR_ARG, line)
         if match is not None:
             t = (instruction_set[match.group(1)], match.group(2))

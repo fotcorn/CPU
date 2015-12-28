@@ -1,3 +1,4 @@
+# count from 1 to 5 and print each iteration to the console
 pushconst 1
 popaddr $counter
 
