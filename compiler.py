@@ -10,7 +10,7 @@ REGEX_LABEL = '\s*(\.[a-z]+).*'
 
 
 def compile_file(path):
-    print path
+    print 'Reading file {}'.format(path)
     fin = file(path, 'r')
     lines = fin.readlines()
     fin.close()
@@ -19,7 +19,7 @@ def compile_file(path):
         output_path = path.replace('asm', 'bin')
     else:
         output_path = path + '.asm'
-    print output_path
+    print 'Writing compiled file to {}'.format(output_path)
     fout = file(output_path, 'w')
 
     program = []
