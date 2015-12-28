@@ -3,7 +3,7 @@ import re
 import sys
 
 REGEX_INSTR_NO_ARG = '\s*([a-z]+).*'
-REGEX_INSTR_STR_ARG = '\s*([a-z]+)\s+([\.\$][a-z]+).*'
+REGEX_INSTR_STR_ARG = '\s*([a-z]+)\s+([\.\$][a-z0-9]+).*'
 REGEX_INSTR_ADDR_ARG = '\s*([a-z]+)\s+\#([0-9]+).*'
 REGEX_INSTR_NUM_ARG = '\s*([a-z]+)\s+([0-9]+).*'
 REGEX_LABEL = '\s*(\.[a-z]+).*'
